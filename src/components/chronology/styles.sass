@@ -1,0 +1,92 @@
+@use 'sass:map'
+@use '../../styles/mixins' as mix
+@use '../../styles/variables' as vars
+
+.chronology
+    padding: 50px 0
+    &-swiper
+        width: 100%
+        display: flex
+        justify-content: center
+    &-content
+        @include mix.flex-content(flex-start, column)
+        row-gap: 30px
+        .custom-pagination
+            @include mix.flex-content(center, row)
+            margin-top: 20px
+            gap: 8px
+            .dot
+                width: 12px
+                height: 12px
+                border-radius: 50%
+                background-color: #ccc
+                transition: all 0.3s ease
+                cursor: pointer
+
+                &.active
+                    background-color: map.get(vars.$main, 'main')
+                    transform: scale(1.2)
+        &-title
+            text-align: center
+            border-bottom: 2px solid map.get(vars.$main, 'main')
+            .title
+                +mix.typography(32px, 600, map.get(vars.$main, 'main'))
+                opacity: 0.5
+    &-card
+        border: 2px solid map.get(vars.$main, 'main')
+        max-width: 390px
+        height: 450px
+        width: 100%
+        position: relative
+        border-radius: 6px
+        @media screen and (max-width: 850px)
+            width: 100%
+            max-width: 100%
+            height: 500px
+        &-content
+            &-img
+                .img
+                    position: absolute
+                    top: 0
+                    left: 0
+                    right: 0
+                    bottom: 0
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+            &-text
+                position: absolute
+                bottom: 0
+                left: 0
+                height: 100%
+                width: 100%
+                background: #dbe5b64d
+                @include mix.flex-content(flex-end, column)
+                row-gap: 20px
+                padding: 20px 10px
+                &-heading
+                    .heading
+                        +mix.typography(32px, 600, map.get(vars.$main, 'main'))
+                &-description
+                    .description
+                        +mix.typography(24px, 500, map.get(vars.$main, 'secondary'))
+    &-btns
+        width: 100%
+        @include mix.flex-content(flex-end, row)
+        column-gap: 10px
+        .slider-btn
+            cursor: pointer
+            width: 50px
+            height: 50px
+            @include mix.flex-content(center, row)
+            background: map.get(vars.$basic, 'white')
+            border: 1px solid map.get(vars.$main, 'main')
+            border-radius: 50%
+            transition: all 0.5s ease
+            svg
+                cursor: pointer
+                +mix.typography(24px, 600, map.get(vars.$main, 'main'))
+            &:hover
+                background: map.get(vars.$main, 'main')
+                svg
+                    color: map.get(vars.$basic, 'white')
