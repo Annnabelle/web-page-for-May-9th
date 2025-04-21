@@ -1,13 +1,13 @@
-import { useState } from 'react'
+
 import { BrowserRouter } from 'react-router-dom'
 import Header from './components/header'
-import Hero from './components/hero'
+import Home from './pages/home'
 function App() {
 
   return (
     <BrowserRouter>
       <Header/>
-      <Hero/>
+      <Home/>
     </BrowserRouter>
   )
 }

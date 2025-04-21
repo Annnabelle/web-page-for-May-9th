@@ -1,10 +1,12 @@
-import React from 'react'
+
 import Hero from '../../components/hero'
+import Chronology from '../../components/chronology'
 
 const Home = () => {
   return (
     <>
         <Hero/>
+        <Chronology/>
     </>
   )
 }
