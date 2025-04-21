@@ -1,0 +1,63 @@
+@use 'sass:map'
+@use '../../styles/mixins' as mix
+@use '../../styles/variables' as vars
+.hero
+    position: relative
+    height: 100vh
+    &-content
+        position: relative
+        z-index: 2
+        @include mix.flex-content(flex-start)
+        height: 100vh
+        width: 100%
+        @media screen and (max-width: 550px)
+            align-items: flex-end
+        &-heading
+            @include mix.flex-content(flex-start, column)
+            align-items: start
+            @media screen and (max-width: 550px)
+                padding-bottom: 50px
+            &-title
+                .title
+                    +mix.typography(74px, 600, map.get(vars.$basic, 'white'))
+                    @media screen and (max-width: 768px)
+                        font-size: 64px
+                    @media screen and (max-width: 650px)
+                        font-size: 52px
+                    @media screen and (max-width: 550px)
+                        font-size: 32px
+                    @media screen and (max-width: 420px)
+                        font-size: 24px
+            &-subtitle
+                .subtitle
+                    line-height: 82px
+                    +mix.typography(36px, 300, map.get(vars.$basic, 'white'))
+                    @media screen and (max-width: 768px)
+                        font-size: 28px
+                    @media screen and (max-width: 650px)
+                        font-size: 24px
+                    @media screen and (max-width: 550px)
+                        font-size: 21px
+                        line-height: 41px
+    &-bg-brightness
+        background: #0000006e
+        position: absolute
+        top: 0
+        left: 0
+        height: 100vh
+        width: 100%
+        display: block
+        z-index: 1
+    &-image
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: url('../../assets/BackPhoto.png')
+        background-position-x: right
+        background-size: cover
+        background-repeat: no-repeat
+        .img
+            width: 100%
+            object-fit: cover
