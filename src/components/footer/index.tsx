@@ -1,4 +1,3 @@
-import React from 'react'
 import { FiFacebook, FiLinkedin } from 'react-icons/fi'
 import { IoMailOpenOutline } from 'react-icons/io5'
 import { Link } from 'react-router-dom'

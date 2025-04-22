@@ -36,7 +36,7 @@ const Header = () => {
         <div className="headerItem">
           <span
             className={`mobileOverlay ${burgerIsOpen ? "activeMenu" : ""}`}
-            onClick={(e) => toggleMenu(false)}
+            onClick={() => toggleMenu(false)}
           ></span>
           <NavBar
             burgerIsOpen={burgerIsOpen}

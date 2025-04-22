@@ -7,7 +7,7 @@ interface NavBarProps {
     isNotMainPage: boolean;
 }
 
-const NavBar: React.FC<NavBarProps> = ({ burgerIsOpen, toggleMenu, isNotMainPage }) => {
+const NavBar: React.FC<NavBarProps> = ({ burgerIsOpen, toggleMenu }) => {
   const handleLinkClick = () => {
     toggleMenu(false);
   };
