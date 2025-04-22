@@ -1,0 +1,45 @@
+@use 'sass:map'
+@use '../../styles/mixins' as mix
+@use '../../styles/variables' as vars
+.nurata-navigation
+    &-container
+        width: 100%
+        @include mix.flex-content(flex-start, row)
+        align-items: start
+        @media screen and (max-width: 1200px)
+            flex-wrap: wrap
+            justify-content: space-between
+        @media screen and (max-width: 768px)
+            justify-content: flex-start
+            align-items: start
+    &-item
+        padding: 20px
+        background: transparent
+        transition: all 0.5s ease
+        @media screen and (max-width: 1200px)
+            width: 30%
+        @media screen and (max-width: 990px)
+            width: 50%
+        @media screen and (max-width: 768px)
+            width: 100%
+        .title
+            +mix.typography(20px, 300, map.get(vars.$basic, 'white'))
+        .link
+            @include mix.flex-content(center, row)
+            column-gap: 15px
+            @media screen and (max-width: 768px)
+                justify-content: flex-start
+            .text
+                +mix.typography(20px, 300, map.get(vars.$basic, 'black'))
+            svg
+                font-size: 24px
+                color: map.get(vars.$basic, 'black')
+        &:hover
+            background: map.get(vars.$main, 'main-light')
+            .link
+                .text
+                    color: map.get(vars.$main, 'main')
+                svg
+                    color: map.get(vars.$main, 'main')
+    &-item.heading
+        background: map.get(vars.$main, 'main')

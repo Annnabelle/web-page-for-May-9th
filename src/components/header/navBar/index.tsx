@@ -33,7 +33,7 @@ const NavBar: React.FC<NavBarProps> = ({ burgerIsOpen, toggleMenu }) => {
             </Link>
             <Link
               className='navLink'
-              to='/products'
+              to='/nurata'
               onClick={handleLinkClick}
             >
               О Нурате
