@@ -13,7 +13,7 @@ const Footer = () => {
                         <div className="footer-content-heading">
                             <div className="footer-content-heading-container">
                                 <div className="footer-content-heading-container-title">
-                                    <h4 className="title">Рустам мухамедов</h4>
+                                    <h4 className="title">Рустам Мухамедов</h4>
                                 </div>
                                 <div className="footer-content-heading-container-subtitle">
                                     <p className="subtitle">Сайт Биография</p>
