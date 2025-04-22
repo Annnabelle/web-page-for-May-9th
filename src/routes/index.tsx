@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import NurataInner from "../pages/nurataInner";
 
 
 const Home = lazy(() => import("../pages/home"));
@@ -12,6 +13,7 @@ const Router: React.FC = () => {
         <Route path='/' element={<Home/>}/>
         <Route path='/biography' element={<BiographyPage/>}/>
         <Route path='/nurata' element={<NurataPage/>}/>
+        <Route path='/nurata/:id' element={<NurataInner/>}/>
       </Routes>
     </Suspense>
   );
