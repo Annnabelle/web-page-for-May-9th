@@ -1,0 +1,226 @@
+@use 'sass:map'
+@use '../../styles/mixins' as mix
+@use '../../styles/variables' as vars
+.biography-body
+    padding: 50px 0
+    &-container
+        @include mix.flex-content(space-between, row)
+        column-gap: 50px
+        align-items: start
+        @media screen and (max-width: 1400px)
+            flex-direction: column-reverse
+        &-items
+            width: 100%
+        &-navigation
+            .biography-navigation
+                border-radius: 6px
+                &-title
+                    background: map.get(vars.$main, 'main')
+                    padding: 30px
+                    border-radius: 6px 6px 0 0
+                    .title
+                        +mix.typography(20px, 400, map.get(vars.$basic, 'white' ))
+                &-container
+                    @include mix.flex-content(flex-start, column)
+                    align-items: start
+                    @media screen and (max-width: 1400px)
+                        flex-direction: row
+                        justify-content: space-between
+                        flex-wrap: wrap
+                    &-item
+                        padding: 30px
+                        background: transparent
+                        width: 100%
+                        transition: all 0.5s ease
+                        @media screen and (max-width: 1400px)
+                            width: 30%
+                        @media screen and (max-width: 1300px)
+                            width: 50%
+                        @media screen and (max-width: 768px)
+                            width: 100%
+                        @media screen and (max-width: 550px)
+                            padding: 30px 10px
+                        .link
+                            @include mix.flex-content(flex-start, row)
+                            column-gap: 15px
+                            svg
+                                color: map.get(vars.$basic, 'black')
+                            .text
+                                +mix.typography(20px, 400, map.get(vars.$basic, 'black'))
+                                @media screen and (max-width: 550px)
+                                    font-size: 16px
+                        &:hover
+                            background: map.get(vars.$main, 'main-light')
+                            .link
+                                svg
+                                    color: map.get(vars.$main, 'main')
+                                .text
+                                    color: map.get(vars.$main, 'main')
+
+    .biography-content
+        @include mix.flex-content(flex-start, column)
+        row-gap: 40px
+        .childhood
+            &-container
+                @include mix.flex-content(flex-start, row)
+                column-gap: 30px
+                align-items: start
+                @media screen and (max-width: 990px)
+                    flex-direction: column
+                    row-gap: 20px
+            &-items
+                @include mix.flex-content(flex-start, column)
+                row-gap: 30px
+                align-items: start
+                @media screen and (max-width: 990px)
+                    width: 100%
+                &-image
+                    @media screen and (max-width: 990px)
+                        width: 100%
+                    .img
+                        object-fit: cover
+                        @media screen and (max-width: 990px)
+                            width: 100%
+                &-title
+                    .title
+                        +mix.typography(24px, 600, map.get(vars.$basic, 'black'))
+                &-description
+                    .description
+                        line-height: 28px
+                        +mix.typography(18px, 300, map.get(vars.$basic, 'black'))
+                        &-strong
+                            font-weight: 700
+            &-description
+                line-height: 28px
+                .description
+                    +mix.typography(18px, 300, map.get(vars.$basic, 'black'))
+        .legal
+            &-container
+                @include mix.flex-content(flex-start, column)
+                row-gap: 30px
+                align-items: start
+            &-title
+                .title
+                    +mix.typography(24px, 600, map.get(vars.$basic, 'black'))
+            &-description
+                line-height: 28px
+                .description
+                    +mix.typography(18px, 300, map.get(vars.$basic, 'black'))
+        .heritage
+            &-container
+                @include mix.flex-content(flex-start, column)
+                row-gap: 30px
+                align-items: start
+            &-title
+                .title
+                    +mix.typography(24px, 600, map.get(vars.$basic, 'black'))
+            &-description
+                line-height: 28px
+                .description
+                    +mix.typography(18px, 300, map.get(vars.$basic, 'black'))
+            &-image
+                @media screen and (max-width: 1400px)
+                    width: 100%
+                .img
+                    width: 100%
+                &-description
+                    +mix.typography(15px, 300, #5A5A5A)
+        .culturalValues
+            &-container
+                @include mix.flex-content(flex-start, row)
+                column-gap: 30px
+                align-items: start
+                @media screen and (max-width: 990px)
+                    flex-direction: column
+                    row-gap: 20px
+            &-items
+                @include mix.flex-content(flex-start, column)
+                row-gap: 30px
+                align-items: start
+                @media screen and (max-width: 990px)
+                    width: 100%
+                &-image
+                    @media screen and (max-width: 990px)
+                        width: 100%
+                    .img
+                        object-fit: cover
+                        @media screen and (max-width: 990px)
+                            width: 100%
+                &-title
+                    .title
+                        +mix.typography(24px, 600, map.get(vars.$basic, 'black'))
+                &-description
+                    .description
+                        line-height: 28px
+                        +mix.typography(18px, 300, map.get(vars.$basic, 'black'))
+            &-description
+                line-height: 28px
+                .description
+                    +mix.typography(18px, 300, map.get(vars.$basic, 'black'))
+        .awards
+            &-container
+                @include mix.flex-content(flex-start, column)
+                row-gap: 30px
+                align-items: start
+            &-title
+                .title
+                    +mix.typography(24px, 600, map.get(vars.$basic, 'black'))
+            &-description
+                line-height: 28px
+                .description
+                    +mix.typography(18px, 300, map.get(vars.$basic, 'black'))
+            &-image
+                @media screen and (max-width: 1400px)
+                    width: 100%
+                .img
+                    width: 100%
+                &-description
+                    +mix.typography(15px, 300, #5A5A5A)
+        .completion
+            &-container
+                @include mix.flex-content(flex-start, column)
+                row-gap: 30px
+                align-items: start
+            &-heading
+                padding: 30px 50px
+                border-top: 2px solid map.get(vars.$main, 'main')
+                border-bottom: 2px solid map.get(vars.$main, 'main')
+                @include mix.flex-content(center)
+                @media screen and (max-width: 768px)
+                    padding: 30px
+                @media screen and (max-width: 550px)
+                    padding: 30px 0
+                .heading
+                    font-style: italic
+                    text-align: center
+                    +mix.typography(30px, 300, map.get(vars.$basic, 'black'))
+                    @media screen and (max-width: 768px)
+                        font-size: 24px
+                    @media screen and (max-width: 550px)
+                        font-size: 18px
+            &-title
+                .title
+                    +mix.typography(24px, 600, map.get(vars.$basic, 'black'))
+            &-description
+                line-height: 28px
+                .description
+                    +mix.typography(18px, 300, map.get(vars.$basic, 'black'))
+    .content-heading
+        width: 100%
+        border-top: 2px solid map.get(vars.$main, 'main')
+        border-bottom: 2px solid map.get(vars.$main, 'main')
+        @include mix.flex-content(center, row)
+        .heading-title
+            padding: 30px 50px
+            @media screen and (max-width: 768px)
+                padding: 30px
+            @media screen and (max-width: 550px)
+                padding: 30px 0
+            .title
+                text-align: center
+                font-style: italic
+                +mix.typography(30px, 300, map.get(vars.$basic, 'black'))
+                @media screen and (max-width: 768px)
+                    font-size: 24px
+                @media screen and (max-width: 550px)
+                    font-size: 18px
