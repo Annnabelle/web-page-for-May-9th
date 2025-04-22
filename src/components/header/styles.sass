@@ -125,6 +125,19 @@
                 display: inline-block
                 position: relative
                 transition: all 0.25s ease-out
+                transition: all 0.5s ease
+                &::after
+                    content: '',
+                    position: absolute
+                    width: 0
+                    height: 2px
+                    bottom: -5px
+                    left: 0
+                    background: map.get(vars.$basic, 'white')
+                    transition: all 0.5s ease
+                &:hover
+                    &::after
+                        width: 100%
                 @media screen and (max-width: 991px)
                     font-size: 15px
                 &:hover
@@ -145,7 +158,7 @@
                 transform: translateX(0)
 
 .scrolledHeaderBg
-    background: map.get(vars.$main, 'main')
+    background: map.get(vars.$main, 'secondary')
     .headerItems
         .headerItem
             .nav
