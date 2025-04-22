@@ -1,0 +1,83 @@
+@use 'sass:map'
+@use '../../styles/mixins' as mix
+@use '../../styles/variables' as vars
+.nurata
+    padding: 50px 0
+    &-container
+        @include mix.flex-content(center, column)
+        row-gap: 30px
+    &-title
+        text-align: center
+        border-bottom: 2px solid map.get(vars.$main, 'main')
+        .title
+            +mix.typography(32px, 600, map.get(vars.$main, 'main'))
+            opacity: 0.5
+            text-transform: uppercase
+    &-items
+        width: 100%
+        @include mix.flex-content(space-between, row)
+        column-gap: 100px
+        @media screen and (max-width: 1200px)
+            column-gap: 50px
+        @media screen and (max-width: 991px)
+            column-gap: 25px
+        @media screen and (max-width: 768px)
+            flex-direction: column
+            row-gap: 20px
+    &-item
+        width: 100%
+        &-content
+            @include mix.flex-content(space-between, column)
+            row-gap: 30px
+            align-items: start
+            @media screen and (max-width: 991px)
+                row-gap: 20px
+            .content-title
+                .title
+                    +mix.typography(48px, 700, map.get(vars.$basic, 'black'))
+                    @media screen and (max-width: 1200px)
+                        font-size: 32px
+                    @media screen and (max-width: 991px)
+                        font-size: 32px
+                    @media screen and (max-width: 550px)
+                        font-size: 28px
+            .content-subtitle
+                .subtitle
+                    line-height: 42px
+                    +mix.typography(28px, 400, map.get(vars.$basic, 'black'))
+                    @media screen and (max-width: 1200px)
+                        font-size: 24px
+                    @media screen and (max-width: 991px)
+                        font-size: 21px
+                        line-height: 32px
+                    @media screen and (max-width: 550px)
+                        font-size: 18px
+                        line-height: 28px
+            .content-text
+                .text
+                    line-height: 28px
+                    +mix.typography(24px, 400, map.get(vars.$basic, 'black'))
+                    @media screen and (max-width: 1200px)
+                        font-size: 24px
+                    @media screen and (max-width: 991px)
+                        line-height: 24px
+                        font-size: 20px
+                    @media screen and (max-width: 550px)
+                        font-size: 18px
+                        line-height: 21px
+            .content-link
+                .link
+                    @include mix.flex-content(flex-start, row)
+                    column-gap: 5px
+                    text-align: center
+                    +mix.typography(28px, 500, map.get(vars.$main, 'main'))
+                    @media screen and (max-width: 1200px)
+                        font-size: 24px
+                    @media screen and (max-width: 991px)
+                        font-size: 20px
+                    @media screen and (max-width: 550px)
+                        font-size: 18px
+        .image
+            .img
+                width: 100%
+                object-fit: cover
