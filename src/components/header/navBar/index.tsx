@@ -40,7 +40,7 @@ const NavBar: React.FC<NavBarProps> = ({ burgerIsOpen, toggleMenu }) => {
             </Link>
             <Link
               className='navLink'
-              to='/news'
+              to='/vov'
               onClick={handleLinkClick}
             >
               В.О.В.
