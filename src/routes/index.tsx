@@ -1,14 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import NurataInner from "../pages/nurataInner";
-import GalleryInner from "../pages/galleryInner";
-
 
 const Home = lazy(() => import("../pages/home"));
 const BiographyPage = lazy(() => import("../pages/biography"))
 const NurataPage = lazy(() => import("../pages/nurataPage"))
 const Vov = lazy(() => import('../pages/vov'))
 const Gallery = lazy(() => import("../pages/gallery"))
+const Career = lazy(() => import("../pages/career"));
+const GalleryInner = lazy(() => import ("../pages/galleryInner"))
+const NurataInner = lazy(() => import("../pages/nurataInner"))
 
 const Router: React.FC = () => {
   return (
@@ -21,6 +21,7 @@ const Router: React.FC = () => {
         <Route path='/vov' element={<Vov/>}/>
         <Route path='/gallery' element={<Gallery/>}/>
         <Route path='/gallery-inner/:id' element={<GalleryInner/>}/>
+        <Route path='/career' element={<Career/>}/>
       </Routes>
     </Suspense>
   );
