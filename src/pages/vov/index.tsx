@@ -1,13 +1,11 @@
-import Dropdown from "../../components/dropdown"
 import Hero from "../../components/hero"
 import VovBody from "../../components/vovBody"
-
 
 const Vov = () => {
   return (
     <>
-        <Hero/>
-        <VovBody/>
+      <Hero/>
+      <VovBody/>
     </>
   )
 }

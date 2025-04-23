@@ -13,6 +13,7 @@ import army2 from '../../assets/army3.png';
 import army3 from '../../assets/army4.png';
 import army4 from '../../assets/army5.png';
 import army5 from '../../assets/army6.png';
+
 export const GalleryInnerData =[
     {
         id: '1',
