@@ -1,0 +1,67 @@
+@use 'sass:map'
+@use '../../styles/mixins' as mix
+@use '../../styles/variables' as vars
+.publications-page-body
+    padding: 50px 0
+    &-container
+        @include mix.flex-content(center, column)
+        row-gap: 50px
+        &-title
+            text-align: center
+            border-bottom: 2px solid map.get(vars.$main, 'main')
+            .title
+                +mix.typography(32px, 600, map.get(vars.$main, 'main'))
+                opacity: 0.5
+                text-transform: uppercase
+        &-content
+            @include mix.flex-content(center, column)
+            row-gap: 50px
+            align-items: start
+            .nurata-component
+                &-container
+                    @include mix.flex-content(space-between, row)
+                    column-gap: 20px
+                    @media screen and (max-width: 768px)
+                        flex-direction: column
+                        row-gap: 20px
+                    &-items
+                        width: 100%
+                        &-content
+                            @include mix.flex-content(center, column)
+                            align-items: start
+                            row-gap: 20px
+                            .content-title
+                                .title
+                                    +mix.typography(48px, 700, map.get(vars.$basic, 'black'))
+                                    @media screen and (max-width: 1200px)
+                                        font-size: 32px
+                                    @media screen and (max-width: 990px)
+                                        font-size: 24px
+                            .content-description
+                                .description
+                                    +mix.typography(24px, 400, map.get(vars.$basic, 'black'))
+                                    line-height: 28px
+                                    @media screen and (max-width: 1200px)
+                                        font-size: 20px
+                                        line-height: 24px
+                                    @media screen and (max-width: 990px)
+                                        font-size: 18px
+                            .content-link
+                                .link
+                                    @include mix.flex-content(center, row)
+                                    column-gap: 10px
+                                    +mix.typography(28px, 400, map.get(vars.$main, 'main'))
+                                    @media screen and (max-width: 1200px)
+                                        font-size: 20px
+                                    @media screen and (max-width: 990px)
+                                        font-size: 18px
+                        &-image
+                            width: 100%
+                            .img
+                                width: 100%
+                                border-radius: 6px
+    &-container .row-reverse
+        flex-direction: row-reverse
+        @media screen and (max-width: 768px)
+            flex-direction: column
+            row-gap: 20px
