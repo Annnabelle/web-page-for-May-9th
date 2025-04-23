@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import NurataInner from "../pages/nurataInner";
+import GalleryInner from "../pages/galleryInner";
 
 
 const Home = lazy(() => import("../pages/home"));
@@ -19,6 +20,7 @@ const Router: React.FC = () => {
         <Route path='/nurata/:id' element={<NurataInner/>}/>
         <Route path='/vov' element={<Vov/>}/>
         <Route path='/gallery' element={<Gallery/>}/>
+        <Route path='/gallery-inner/:id' element={<GalleryInner/>}/>
       </Routes>
     </Suspense>
   );
