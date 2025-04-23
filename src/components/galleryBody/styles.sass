@@ -1,0 +1,43 @@
+@use "sass:map"
+@use '../../styles/mixins' as mix
+@use '../../styles/variables' as vars
+.gallery-body
+    padding: 50px 0
+    &-container
+        @include mix.flex-content(flex-start, column)
+        align-items: start
+        row-gap: 50px
+        &-title
+            .title
+                +mix.typography(48px, 700, map.get(vars.$basic, 'black'))
+        &-items
+            @include mix.flex-content(center, row)
+            flex-wrap: wrap
+            gap: 30px
+            &-item
+                width: 370px
+                height: 370px
+                @media screen and (max-width: 550px)
+                    width: 100%
+                .link
+                    position: relative
+                    width: 100%
+                    height: 100%
+                    .item-image
+                        width: 100%
+                        height: 100%
+                        .img
+                            width: 100%
+                            height: 100%
+                            object-fit: fill
+                            @media screen and (max-width: 550px)
+                                object-fit: cover
+                    .item-description
+                        position: absolute
+                        left: 0
+                        bottom: 0
+                        right: 0
+                        @include mix.flex-content(center, row)
+                        padding: 20px
+                        .description
+                            +mix.typography(24px, 600, map.get(vars.$basic, 'white'))
