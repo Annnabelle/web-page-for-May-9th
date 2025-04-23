@@ -47,7 +47,7 @@ const NavBar: React.FC<NavBarProps> = ({ burgerIsOpen, toggleMenu }) => {
             </Link>
             <Link
                 className='navLink'
-                to='/resources'
+                to='/career'
             >
               Карьера
             </Link>
