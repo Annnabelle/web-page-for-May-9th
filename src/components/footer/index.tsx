@@ -28,13 +28,13 @@ const Footer = () => {
                 <div className="footer-items">
                     <div className="footer-items-links">
                         <Link to='/' className='link'>Главная</Link>
-                        <Link to='/' className='link'>Биография</Link>
-                        <Link to='/' className='link'>О Нурате</Link>
-                        <Link to='/' className='link'>В.О.В.</Link>
-                        <Link to='/' className='link'>Карьера</Link>
-                        <Link to='/' className='link'>Публикации</Link>
-                        <Link to='/' className='link'>Галерея</Link>
-                        <Link to='/' className='link'>Музей</Link>
+                        <Link to='/biography' className='link'>Биография</Link>
+                        <Link to='/nurata' className='link'>О Нурате</Link>
+                        <Link to='/vov' className='link'>В.О.В.</Link>
+                        <Link to='/career' className='link'>Карьера</Link>
+                        <Link to='/publications' className='link'>Публикации</Link>
+                        <Link to='/gallery' className='link'>Галерея</Link>
+                        <Link to='/museum' className='link'>Музей</Link>
                     </div>
                 </div>
                 <div className="footer-items">
