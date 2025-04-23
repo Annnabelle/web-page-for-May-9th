@@ -10,6 +10,7 @@ const Career = lazy(() => import("../pages/career"));
 const GalleryInner = lazy(() => import ("../pages/galleryInner"))
 const NurataInner = lazy(() => import("../pages/nurataInner"))
 const Publications = lazy(() => import("../pages/publications"))
+const Museum = lazy(() => import("../pages/museum"))
 
 const Router: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const Router: React.FC = () => {
         <Route path='/gallery-inner/:id' element={<GalleryInner/>}/>
         <Route path='/career' element={<Career/>}/>
         <Route path='/publications' element={<Publications/>}/>
+        <Route path='/museum' element={<Museum/>}/>
       </Routes>
     </Suspense>
   );
