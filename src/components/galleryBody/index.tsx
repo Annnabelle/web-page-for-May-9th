@@ -17,7 +17,7 @@ const GalleryBody = () => {
                 </div>
                 <div className="gallery-body-container-items">
                     <div className="gallery-body-container-items-item">
-                        <Link to='/' className='link'>
+                        <Link to='/gallery-inner/1' className='link'>
                             <div className="item-image">
                                 <img src={warImage} alt="warImage" className='img'/>
                             </div>
@@ -27,7 +27,7 @@ const GalleryBody = () => {
                         </Link>
                     </div>
                     <div className="gallery-body-container-items-item">
-                        <Link to='/' className='link'>
+                        <Link to='/gallery-inner/2' className='link'>
                             <div className="item-image">
                                 <img src={nurataGallery} alt="nurataGallery" className='img'/>
                             </div>
@@ -37,7 +37,7 @@ const GalleryBody = () => {
                         </Link>
                     </div>
                     <div className="gallery-body-container-items-item">
-                        <Link to='/' className='link'>
+                        <Link to='/gallery-inner/3' className='link'>
                             <div className="item-image">
                                 <img src={prosecutors} alt="prosecutors" className='img'/>
                             </div>
@@ -47,7 +47,7 @@ const GalleryBody = () => {
                         </Link>
                     </div>
                     <div className="gallery-body-container-items-item">
-                        <Link to='/' className='link'>
+                        <Link to='/gallery-inner/4' className='link'>
                             <div className="item-image">
                                 <img src={vietnam} alt="vietnam" className='img'/>
                             </div>
@@ -57,7 +57,7 @@ const GalleryBody = () => {
                         </Link>
                     </div>
                     <div className="gallery-body-container-items-item">
-                        <Link to='/' className='link'>
+                        <Link to='/gallery-inner/5' className='link'>
                             <div className="item-image">
                                 <img src={family} alt="family" className='img'/>
                             </div>
