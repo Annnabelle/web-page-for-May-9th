@@ -1,7 +1,6 @@
-import React from 'react'
-import './styles.sass'
 import Dropdown from '../dropdown'
 import vovImage from '../../assets/vov.png'
+import './styles.sass'
 
 const VovBody = () => {
   return (

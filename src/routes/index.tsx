@@ -7,6 +7,8 @@ const Home = lazy(() => import("../pages/home"));
 const BiographyPage = lazy(() => import("../pages/biography"))
 const NurataPage = lazy(() => import("../pages/nurataPage"))
 const Vov = lazy(() => import('../pages/vov'))
+const Gallery = lazy(() => import("../pages/gallery"))
+
 const Router: React.FC = () => {
   return (
     <Suspense fallback={<div>Загрузка...</div>}>
@@ -16,6 +18,7 @@ const Router: React.FC = () => {
         <Route path='/nurata' element={<NurataPage/>}/>
         <Route path='/nurata/:id' element={<NurataInner/>}/>
         <Route path='/vov' element={<Vov/>}/>
+        <Route path='/gallery' element={<Gallery/>}/>
       </Routes>
     </Suspense>
   );
