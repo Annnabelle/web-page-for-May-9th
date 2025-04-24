@@ -1,10 +1,9 @@
-import { IoShield } from 'react-icons/io5'
 import { HashLink } from 'react-router-hash-link'
-import './styles.sass'
 import { GiRainbowStar } from 'react-icons/gi'
 import { FaFish } from 'react-icons/fa'
 import { MdMosque } from 'react-icons/md'
 import { PiMosqueFill } from 'react-icons/pi'
+import './styles.sass'
 
 const NurataNavigation = () => {
   return (

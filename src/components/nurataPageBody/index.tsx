@@ -1,10 +1,9 @@
-import React from 'react'
-import './styles.sass'
 import NurataBodyComponent from './nurataComponent'
 import nurataFirst from '../../assets/nurataFirst.png'
 import nurataSecond from '../../assets/nurataSecond.png'
 import nurataThird from '../../assets/nurataThird.png'
 import nurataForth from '../../assets/nurataForth.png'
+import './styles.sass'
 
 
 const NurataPageBody = () => {
