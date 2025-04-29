@@ -21,7 +21,7 @@ const PublicationsBody = () => {
                         linkText="Скачать книгу"
                         image={publicationImageSecond}
                         id='heavenlyRay'
-                        link='../../assets/career.dox'
+                        link='https://fast-api.mukhamedov.uz/download/%D0%A0_%D0%9C%D1%83%D1%85%D0%B0%D0%BC%D0%B5%D0%B4%D0%BE%D0%B2_%D0%90%D0%B4%D0%BE%D0%BB%D0%B0%D1%82%D0%B3%D0%B0_%D1%82%D0%B8%D0%BA%D0%B8%D0%BB%D0%B3%D0%B0%D0%BD_%D1%85%D0%B0%D1%91%D1%82_1_318_%D0%B1%D0%B1_%D0%BE%D1%85%D0%B8%D1%80%D0%B8%D0%B3%D0%B0%D1%87%D0%B0.docx'
                     />
                     <PublicationComponent
                         title="Книга о войне" 
@@ -34,7 +34,7 @@ const PublicationsBody = () => {
                         image={publicationImageFirst}
                         className="row-reverse"
                         id='sacredFish'
-                        link='../../assets/war.dox'
+                        link='https://fast-api.mukhamedov.uz/download/%D0%A0%D1%83%D1%81%D1%82%D0%B0%D0%BC_%D0%9C%D1%83%D1%85%D0%B0%D0%BC%D0%B5%D0%B4%D0%BE%D0%B2_%D0%A3%D0%BD%D1%83%D1%82%D0%B8%D0%BB%D0%BC%D0%B0%D1%81_%D2%9B%D0%BE%D0%BD%D0%BB%D0%B8_%D0%B2%D0%B0_%D1%88%D0%BE%D0%BD%D0%BB%D0%B8_%D0%B9%D1%9E%D0%BB%D0%BB%D0%B0%D1%80.doc'
                     />
                 </div>
             </div>
