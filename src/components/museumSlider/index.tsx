@@ -73,7 +73,7 @@ const MuseumSlider: React.FC = () => {
   const [thumbsSwiper, setThumbsSwiper] = React.useState<SwiperCore | null>(null);
   const prevRef = useRef<HTMLDivElement>(null);
   const nextRef = useRef<HTMLDivElement>(null);
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  // const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   return (
     <div className="museum-slider-page">
       <div className="museum-slider-title">
