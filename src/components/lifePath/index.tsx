@@ -27,7 +27,7 @@ const LifePath: React.FC = () => {
                         <p className="text">В детстве потеряв родителей, он прошел через войну и стал героем. После возвращения домой, он успешно закончил юридическую школу и начал блестящую карьеру прокурора, разрабатывая законодательные акты и учебники. </p>
                       </div>
                       <div className="content-link">
-                        <Link to='/' className='link'>Подробнее <FaArrowRight />                        </Link>
+                        <Link to='/biography  ' className='link'>Подробнее <FaArrowRight />                        </Link>
                       </div>
                     </div>
                   </div>

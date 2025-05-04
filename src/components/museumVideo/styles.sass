@@ -1,0 +1,12 @@
+@use '../../styles/mixins' as mix
+@use '../../styles/variables' as vars
+@use 'sass:map'
+.museum-video
+    max-width: 800px
+    margin: auto
+    padding-top: 50px
+    width: 100%
+    @media screen and (max-width: 768px)
+        max-width: 100%
+    .video
+        width: 100%

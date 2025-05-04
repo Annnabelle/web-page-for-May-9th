@@ -5,6 +5,8 @@ import nurataGallery from '../../assets/nurataGallery.png'
 import prosecutors from '../../assets/prosecutors.png'
 import vietnam from '../../assets/vietnam.png'
 import family from '../../assets/family.png'
+import ninthMay10 from '../../assets/ninthMay10.jpg'
+import oneHundreed2 from '../../assets/oneHundreed2.jpg'
 import './styles.sass'
 
 const GalleryBody = () => {
@@ -63,6 +65,26 @@ const GalleryBody = () => {
                             </div>
                             <div className="item-description">
                                 <p className="description">В кругу семьи</p>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className="gallery-body-container-items-item">
+                        <Link to='/gallery-inner/6' className='link'>
+                            <div className="item-image">
+                                <img src={ninthMay10} alt="ninthMay10" className='img'/>
+                            </div>
+                            <div className="item-description">
+                                <p className="description">Празднование 9го мая</p>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className="gallery-body-container-items-item">
+                        <Link to='/gallery-inner/7' className='link'>
+                            <div className="item-image">
+                                <img src={oneHundreed2} alt="oneHundreed1" className='img'/>
+                            </div>
+                            <div className="item-description">
+                                <p className="description">Празднование 100 летия</p>
                             </div>
                         </Link>
                     </div>

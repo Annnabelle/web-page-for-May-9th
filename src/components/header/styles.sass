@@ -156,6 +156,16 @@
                     margin-right: 0
             &.activeMenu
                 transform: translateX(0)
+            .navLink.active
+                &::after
+                    content: '',
+                    position: absolute
+                    width: 100%
+                    height: 2px
+                    bottom: -5px
+                    left: 0
+                    background: map.get(vars.$basic, 'white')
+                    transition: all 0.5s ease
 
 .scrolledHeaderBg
     background: map.get(vars.$main, 'secondary')
