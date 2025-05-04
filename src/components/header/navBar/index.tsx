@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 interface NavBarProps {
@@ -17,58 +17,58 @@ const NavBar: React.FC<NavBarProps> = ({ burgerIsOpen, toggleMenu }) => {
       <div className='navContainer'>
         <div className='navBox'>
           <div className='links'>
-            <Link
-              className='navLink'
+            <NavLink
+               className={({ isActive }) => `navLink ${isActive ? 'active' : ''}`}
               to='/'
               onClick={handleLinkClick}
             >
               Главная
-            </Link>
-            <Link
-              className='navLink'
+            </NavLink>
+            <NavLink
+               className={({ isActive }) => `navLink ${isActive ? 'active' : ''}`}
               to='/biography'
               onClick={handleLinkClick}
             >
               Биография
-            </Link>
-            <Link
-              className='navLink'
+            </NavLink>
+            <NavLink
+               className={({ isActive }) => `navLink ${isActive ? 'active' : ''}`}
               to='/nurata'
               onClick={handleLinkClick}
             >
               О Нурате
-            </Link>
-            <Link
-              className='navLink'
+            </NavLink>
+            <NavLink
+               className={({ isActive }) => `navLink ${isActive ? 'active' : ''}`}
               to='/vov'
               onClick={handleLinkClick}
             >
               В.О.В.
-            </Link>
-            <Link
-                className='navLink'
+            </NavLink>
+            <NavLink
+                 className={({ isActive }) => `navLink ${isActive ? 'active' : ''}`}
                 to='/career'
             >
               Карьера
-            </Link>
-            <Link
-                className='navLink'
+            </NavLink>
+            <NavLink
+                 className={({ isActive }) => `navLink ${isActive ? 'active' : ''}`}
                 to='/publications'
             >
               Публикации
-            </Link>
-            <Link
-                className='navLink'
+            </NavLink>
+            <NavLink
+                 className={({ isActive }) => `navLink ${isActive ? 'active' : ''}`}
                 to='/gallery'
             >
               Галерея
-            </Link>
-            <Link
-                className='navLink'
+            </NavLink>
+            <NavLink
+                 className={({ isActive }) => `navLink ${isActive ? 'active' : ''}`}
                 to='/museum'
             >
               Музей
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>

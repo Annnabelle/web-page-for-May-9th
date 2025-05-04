@@ -27,7 +27,7 @@ const WarComponent: React.FC = () => {
                         <p className="text">Он участвовал в битвах на Западном, Брянском, 2-м и 4-м Украинских фронтах, помогая освобождать Украину, Молдавию, Румынию, Чехословакию и Польшу. Рустам описал свои воспоминания о войне в книге на узбекском языке под названием "Незабываемые кровавые и славные боевые дороги.</p>
                       </div>
                       <div className="content-link">
-                        <Link to='/' className='link'>Подробнее <FaArrowRight />                        </Link>
+                        <Link to='/vov' className='link'>Подробнее <FaArrowRight />                        </Link>
                       </div>
                     </div>
                   </div>
