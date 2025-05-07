@@ -2,9 +2,14 @@ import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
-import chronologyImage from "../../assets/chronology.png";
+import chronologyImage1 from "../../assets/chronologyImage1.jpg";
+import chronologyImage2 from "../../assets/chronologyImage2.jpg";
+import chronologyImage3 from "../../assets/chronologyImage3.jpg";
+import chronologyImage4 from "../../assets/chronologyImage4.jpg";
+import chronologyImage5 from "../../assets/chronologyImage5.jpg";
 import "swiper/swiper-bundle.css";
 import "./styles.sass";
+import { Link } from "react-router-dom";
 
 const Chronology = () => {
   const prevRef = useRef<HTMLButtonElement>(null);
@@ -12,12 +17,11 @@ const Chronology = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const chronologyContent = [
-    { id: 1, img: chronologyImage, heading: "1995", description: "test" },
-    { id: 2, img: chronologyImage, heading: "1996", description: "test" },
-    { id: 3, img: chronologyImage, heading: "1997", description: "test" },
-    { id: 4, img: chronologyImage, heading: "1998", description: "test" },
-    { id: 5, img: chronologyImage, heading: "1999", description: "test" },
-    { id: 6, img: chronologyImage, heading: "2000", description: "test" },
+    { id: 1, img: chronologyImage1, heading: "1943" },
+    { id: 2, img: chronologyImage2, heading: "1962" },
+    { id: 3, img: chronologyImage3, heading: "1963" },
+    { id: 4, img: chronologyImage4, heading: "1971" },
+    { id: 5, img: chronologyImage5, heading: "1996", description: null },
   ];
 
   return (
@@ -81,21 +85,23 @@ const Chronology = () => {
           >
             {chronologyContent.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="chronology-card">
-                  <div className="chronology-card-content">
-                    <div className="chronology-card-content-img">
-                      <img src={item.img} className="img" alt="" />
-                    </div>
-                    <div className="chronology-card-content-text">
-                      <div className="chronology-card-content-text-heading">
-                        <h5 className="heading">{item.heading}</h5>
+                <Link to='/biography'>
+                  <div className="chronology-card">
+                    <div className="chronology-card-content">
+                      <div className="chronology-card-content-img">
+                        <img src={item.img} className="img" alt="" />
                       </div>
-                      <div className="chronology-card-content-text-description">
-                        <p className="description">{item.description}</p>
+                      <div className="chronology-card-content-text">
+                        <div className="chronology-card-content-text-heading">
+                          <h5 className="heading">{item.heading}</h5>
+                        </div>
+                        <div className="chronology-card-content-text-description">
+                          <p className="description">{item.description}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>

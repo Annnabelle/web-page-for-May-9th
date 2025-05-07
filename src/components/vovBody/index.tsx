@@ -196,18 +196,6 @@ const VovBody = () => {
                             </div>
                         </div>
                     </Dropdown>
-                    <Dropdown title="Воинская присяга">
-                        <div className='dropdown-content-items'>
-                            <div className="items-text">
-                            </div>
-                        </div>
-                    </Dropdown>
-                    <Dropdown title="Воинская присяга">
-                        <div className='dropdown-content-items'>
-                            <div className="items-text">
-                            </div>
-                        </div>
-                    </Dropdown>
                 </div>
             </div>
         </div>
